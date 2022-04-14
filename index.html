@@ -17,15 +17,19 @@
 
     <!-- SignIn & SignUp Buttons -->
     <span id="sign">
-      <button class="top-right">Sign In</button>
-      <button class="top-right" id="myBtn">Sign Up</button>
+      <button class="top-right" id="myBtn1" onclick="signUpButton('myModal1')">
+        Sign In
+      </button>
+      <button class="top-right" id="myBtn2" onclick="signUpButton('myModal2')">
+        Sign Up
+      </button>
     </span>
 
     <!-- SignUp Modal -->
-    <div id="myModal" class="modal">
+    <div id="myModal2" class="modal">
       <!-- Modal content -->
       <div class="modal-content">
-        <span class="close">&times;</span>
+        <span class="close" id="closeId">&times;</span>
         <h1 class="signUp-heading">Get Started</h1>
         <br />
         <hr />
@@ -73,7 +77,7 @@
           <label for="cpassword" class="label-content">Confirm Password</label>
           <br />
           <input
-            type="cpassword"
+            type="password"
             id="cpassword"
             class="textArea-color"
             name="cpassword"
@@ -86,11 +90,98 @@
       </div>
     </div>
 
+    <!-- Sign In Model -->
+
+    <div id="myModal1" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h1 class="signUp-heading">Welcome Back!</h1>
+        <br />
+        <hr />
+        <br />
+
+        <form id="signIn-form">
+          <label for="uname" class="label-content">Username</label>
+          <br />
+          <input
+            type="text"
+            id="uname"
+            class="textArea-color"
+            name="uname"
+            placeholder="Enter Username"
+            required
+          />
+          <br /><br />
+
+          <label for="password" class="label-content">Password</label>
+          <br />
+          <input
+            type="password"
+            id="password"
+            class="textArea-color"
+            name="password"
+            placeholder="Enter Password"
+            required
+          />
+          <br /><br />
+
+          <button class="green-signUp">Sign In</button>
+        </form>
+        <div id="not-member">
+          <!-- <span -->
+          <p>
+            Not a member?
+            <a href="#" id="not-member" onclick="signupMember();">Sign Up</a>
+          </p>
+
+          <!-- </span> -->
+        </div>
+      </div>
+    </div>
+
     <!-- Post-Buttons -->
     <span id="post-container">
       <button class="center-button">All Posts</button>
-      <button class="center-button">Create Post</button>
+      <button
+        class="center-button"
+        id="CreatePost-btn"
+        onclick="createPostModal(id, 'myModal3')"
+      >
+        Create Post
+      </button>
     </span>
+
+    <div id="myModal3" class="modal">
+      <!-- Modal content  -->
+      <div class="modal-post">
+        <span id="closeId2">&times;</span>
+        <h2>Pen Your Post</h2>
+        <form>
+          <label for="title">Title:</label><br />
+          <input
+            type="text"
+            class="text-field-title"
+            name="title"
+          /><br /><br />
+
+          <label for="content">Content:</label><br />
+          <!-- <textarea class="textArea-color" name="content" /> -->
+          <textarea
+            class="textarea-content"
+            name="story"
+            rows="30"
+            cols="30"
+            style="width: 94%; height: 30%"
+          >
+          </textarea
+          ><br />
+          <div class="create-post-btn-container">
+            <button class="create-post-btn">Create</button>
+          </div>
+        </form>
+      </div>
+    </div>
 
     <!-- Page-Title -->
     <h1 class="title">ScriBBler</h1>

@@ -161,3 +161,85 @@ html {
   border: none;
   padding: 15px auto;
 }
+
+#not-member {
+  text-align: center;
+  margin-top: 24px;
+  font-weight: bold;
+}
+
+#not-member a:link,
+a:visited {
+  color: #0000ff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-post {
+  width: 70%;
+  background-color: #fefefe;
+  margin: -85px auto;
+  padding: 25px;
+  border: 1px solid #888;
+  position: relative;
+}
+
+#myModal3 h2 {
+  text-align: center;
+  font-family: "Abel", sans-serif;
+  font-size: 35px;
+  margin-top: -18px;
+}
+
+.text-field-title {
+  background-color: #f1f1f1;
+  border: none;
+  width: 45%;
+  height: 34px;
+  margin: 5px 28px 15px 28px;
+}
+
+.textarea-content {
+  background-color: #f1f1f1;
+  margin: 5px 28px 10px 28px;
+}
+.create-post-btn {
+  color: white;
+  background-color: #5eb762;
+
+  font-size: 16px;
+  padding: 8px auto;
+  padding: 10px 20px;
+  border: none;
+}
+.create-post-btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+#myModal3 label {
+  margin: 5px 28px;
+  font-weight: bold;
+  font-family: "Abel", sans-serif;
+  font-size: 20px;
+}
+
+#myModal3 label :last-child {
+  margin-bottom: 0;
+}
+
+#closeId2 {
+  font-size: 55px;
+  font-weight: bold;
+  position: absolute;
+  left: 96%;
+  top: -5px;
+  color: #001430;
+}
+
+#closeId2:hover,
+#closeId2:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
