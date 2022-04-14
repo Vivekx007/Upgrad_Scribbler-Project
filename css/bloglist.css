@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Marck+Script&display=swap");
+
+body {
+  background-color: #ffa500;
+}
+
+.title a:link,
+a:visited {
+  text-decoration: none;
+  color: #112fb4;
+}
+.title a:active,
+a:hover {
+  color: #112fb4;
+}
