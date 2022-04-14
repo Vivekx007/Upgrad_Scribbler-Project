@@ -21,6 +21,71 @@
       <button class="top-right" id="myBtn">Sign Up</button>
     </span>
 
+    <!-- SignUp Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h1 class="signUp-heading">Get Started</h1>
+        <br />
+        <hr />
+        <br />
+
+        <!-- Sign Up form -->
+        <form id="signUp-form">
+          <label for="fname" class="label-content">Full Name</label>
+          <br />
+
+          <input
+            type="text"
+            id="fname"
+            class="textArea-color"
+            name="fname"
+            placeholder="Enter Full Name"
+            required
+          />
+          <br /><br />
+
+          <label for="uname" class="label-content">Username</label>
+          <br />
+          <input
+            type="text"
+            id="uname"
+            class="textArea-color"
+            name="uname"
+            placeholder="Enter Username"
+            required
+          />
+          <br /><br />
+
+          <label for="password" class="label-content">Password</label>
+          <br />
+          <input
+            type="password"
+            id="password"
+            class="textArea-color"
+            name="password"
+            placeholder="Enter Password"
+            required
+          />
+          <br /><br />
+
+          <label for="cpassword" class="label-content">Confirm Password</label>
+          <br />
+          <input
+            type="cpassword"
+            id="cpassword"
+            class="textArea-color"
+            name="cpassword"
+            placeholder="Confirm Password"
+            required
+          />
+          <br /><br />
+          <button class="green-signUp">Sign Up</button>
+        </form>
+      </div>
+    </div>
+
     <!-- Post-Buttons -->
     <span id="post-container">
       <button class="center-button">All Posts</button>

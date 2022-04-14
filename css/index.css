@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Marck+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
 
 * {
   padding: 0;
@@ -28,10 +29,11 @@ html {
   font-size: 16px;
   padding: 8px 15px;
   margin-right: 0.5px;
-  border-top: #dddddd solid 2px;
-  border-left: #dddddd solid 2px;
-  border-right: #898989 solid 2px;
-  border-bottom: #898989 solid 2px;
+  border-top: #dddddd solid 2.5px;
+  border-left: #dddddd solid 2.5px;
+  border-right: #898989 solid 2.5px;
+  border-bottom: #898989 solid 2.5px;
+  cursor: pointer;
 }
 .top-right:last-child {
   margin-left: 6px;
@@ -40,8 +42,8 @@ html {
 /* All posts & create post container */
 #post-container {
   position: absolute;
-  left: 44%;
-  top: 43%;
+  left: 42%;
+  top: 42%;
 }
 
 /* All posts & create post direction */
@@ -51,10 +53,11 @@ html {
   font-weight: bold;
   font-size: 16px;
   padding: 8px 15px;
-  border-top: #dddddd solid 2px;
-  border-left: #dddddd solid 2px;
-  border-right: #898989 solid 2px;
-  border-bottom: #898989 solid 2px;
+  border-top: #dddddd solid 2.5px;
+  border-left: #dddddd solid 2.5px;
+  border-right: #898989 solid 2.5px;
+  border-bottom: #898989 solid 2.5px;
+  cursor: pointer;
 }
 .center-button:last-child {
   margin-left: 6px;
@@ -65,7 +68,7 @@ html {
   font-family: "Satisfy", cursive;
   color: #112fb4;
   margin-left: 5px;
-  font-size: 45px;
+  font-size: 50px;
   font-weight: normal;
 }
 
@@ -74,4 +77,87 @@ html {
   font-family: "Marck Script", cursive;
   /* color: #112fb4; */
   margin-left: 5px;
+}
+
+/* Model Sign-Up */
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: -85px auto;
+  padding: 25px;
+  border: 1px solid #888;
+  width: 26%;
+  position: relative;
+}
+
+/* The Close Button */
+.close {
+  font-size: 45px;
+  font-weight: 900;
+  position: absolute;
+  left: 90%;
+  top: 0;
+  color: #818181;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Sign Up Heading i.e Get Started */
+.signUp-heading {
+  text-align: center;
+  font-family: "Abel", sans-serif;
+}
+
+/* input type design */
+.textArea-color {
+  background-color: #f1f1f1;
+  padding: 15px;
+  width: 94%;
+  border: none;
+  margin: 8px auto;
+  font-family: "Abel", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  /* margin-left: 18px; */
+}
+
+.label-content {
+  display: inline-block;
+  font-size: 18px;
+
+  font-weight: bold;
+  font-family: "Abel", sans-serif;
+}
+
+/* Green sign Up button  */
+.green-signUp {
+  background-color: #5eb762;
+  color: white;
+  width: 405px;
+  height: 45px;
+  font-size: 15px;
+  /* position: absolute; */
+  /* margin: 10px auto; */
+  border: none;
+  padding: 15px auto;
 }
