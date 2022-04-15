@@ -3,10 +3,23 @@
   <head>
     <link rel="stylesheet" href="/css/bloglist.css" />
     <link rel="stylesheet" href="/css/header.css" />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Patrick+Hand+SC&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+
+  
   </head>
   <body>
     <span id="sign">
@@ -17,17 +30,286 @@
         Sign Up
       </button>
     </span>
-    <h1 class="title"><a href="/index.html">ScriBBler</a></h1>
+    <h1 class="project-title" onclick=""><a href="/index.html">ScriBBler</a></h1>
     <p class="title-para">Explore, Imagine, Create</p>
 
-    <div class="bloglist-container">
-      <div class="post-name">
-        <div class="blogPost-msg">
-          <h2 class="blogPost-title">Hello there! This is Post 1.</h2>
-          <p class="blogPost-content"></p>
+    <!-- SignUp Modal -->
+    <div id="myModal2" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close" id="closeId">&times;</span>
+        <h1 class="signUp-heading">Get Started</h1>
+        <br />
+        <hr />
+        <br />
+
+        <!-- Sign Up form -->
+        <form id="signUp-form">
+          <label for="fname" class="label-content">Full Name</label>
+          <br />
+
+          <input
+            type="text"
+            id="fname"
+            class="textArea-color"
+            name="fname"
+            placeholder="Enter Full Name"
+            required
+          />
+          <br /><br />
+
+          <label for="uname" class="label-content">Username</label>
+          <br />
+          <input
+            type="text"
+            id="uname"
+            class="textArea-color"
+            name="uname"
+            placeholder="Enter Username"
+            required
+          />
+          <br /><br />
+
+          <label for="password" class="label-content">Password</label>
+          <br />
+          <input
+            type="password"
+            id="password"
+            class="textArea-color"
+            name="password"
+            placeholder="Enter Password"
+            required
+          />
+          <br /><br />
+
+          <label for="cpassword" class="label-content">Confirm Password</label>
+          <br />
+          <input
+            type="password"
+            id="cpassword"
+            class="textArea-color"
+            name="cpassword"
+            placeholder="Confirm Password"
+            required
+          />
+          <br /><br />
+          <button class="green-signUp">Sign Up</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Sign In Model -->
+
+    <div id="myModal1" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h1 class="signUp-heading">Welcome Back!</h1>
+        <br />
+        <hr />
+        <br />
+
+        <form id="signIn-form">
+          <label for="uname" class="label-content">Username</label>
+          <br />
+          <input
+            type="text"
+            id="uname"
+            class="textArea-color"
+            name="uname"
+            placeholder="Enter Username"
+            required
+          />
+          <br /><br />
+
+          <label for="password" class="label-content">Password</label>
+          <br />
+          <input
+            type="password"
+            id="password"
+            class="textArea-color"
+            name="password"
+            placeholder="Enter Password"
+            required
+          />
+          <br /><br />
+
+          <button class="green-signUp">Sign In</button>
+        </form>
+        <div id="not-member">
+          <p>
+            Not a member?
+            <a href="#" id="not-member" onclick="signupMember();">Sign Up</a>
+          </p>
         </div>
       </div>
     </div>
-    <script src="./Js/header.js"
+
+
+    <!-- post container boxex -->
+    <div class="post-container">
+      <div class="post">
+        <div class="author">
+          <p class="author-name"><span id="authorname1"> Srishti Gupta</span></p>
+        </div>
+
+        <div class="content">
+          <i class="fa-solid fa-trash-can delete"></i>
+          <div>
+            <p class="title" id="title1">‘let’ me be a ‘const’(ant), not a ‘var’(iable)!</p>
+            <span>
+            </span>
+          </div>
+          <p class="post-content" id="postcontent1">
+            Since JavaScript does not have any type-checking, either of these
+            keywords can be used to declare a variable of any type (datatype)
+            in JavaScript. Though all the three keywords are used for the same
+            purpose, they are different.
+          </p>
+          <div class="button" id="more1"><a href="/html/post.html">...</a></div>
+          <!-- <span>
+          </span> -->
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="author">
+          <p class="author-name"> <span id="authorname2">Colby Fayock</span> </p>
+        </div>
+
+        <div class="content">
+          <i class="fa-solid fa-trash-can delete"></i>
+          <!-- <i class="fa fa-trash delete" aria-hidden="true"></i> -->
+          <div>
+            <p class="title" id="title2">What is linting and how can it save you time?</p>
+            <span>
+            </span>
+          </div>
+          <p class="post-content" id="postcontent2">
+            One of the biggest challenges in software development is time. It’s
+            something we can’t easily get more of, but linting can help us make
+            the most out of the time we have.
+          </p>
+          <span>
+          </span>
+          <div class="button" id="more2"><a href="/html/post.html">...</a></div>
+
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="author">
+          <p class="author-name"> <span id="authorname3">Yazeed Bzadough</span></p>
+        </div>
+
+        <div class="content">
+          <i class="fa-solid fa-trash-can delete"></i>
+          <!-- <i class="fa fa-trash delete" aria-hidden="true"></i> -->
+
+          <div>
+            <p class="title" id="title3">How to Get More Views on Your Tech Blog</p>
+            <span>
+            </span>
+          </div>
+          <p class="post-content" id="postcontent3">
+            If you're a developer with a Twitter account, you've already seen
+            everyone and their cat start a blog, YouTube channel, or Patreon. We
+            all want to become stars, or at the very least, a recognizable name
+            in the industry.
+          </p>
+          <span>
+          </span>
+          <div class="button" id="more3"><a href="/html/post.html">...</a></div>
+
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="author">
+          <p class="author-name"> <span id="authorname4">Cedd Burge</span></p>
+        </div>
+
+        <div class="content">
+          <i class="fa-solid fa-trash-can delete"></i>
+          <!-- <i class="fa fa-trash delete" aria-hidden="true"></i> -->
+
+          <div>
+            <p class="title" id="title4">How to write easily describable code</p>
+            <span>
+            </span>
+          </div>
+          <p class="post-content" id="postcontent4">
+            When code is not describable using words, most people have to do
+            some mental mapping to turn it in to words. This wastes mental
+            energy, and you run the risk of getting the mapping wrong. Different
+            people will map to different words, which leads to confusion when
+            discussing the code.
+          </p>
+          <span>
+          </span>
+          <div class="button" id="more4"><a href="/html/post.html">...</a></div>
+
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="author">
+          <p class="author-name"> <span id="authorname5"> Srishti Gupta</span></p>
+        </div>
+
+        <div class="content">
+          <i class="fa-solid fa-trash-can delete"  aria-hidden="true"></i>
+          <!-- <i class="fa fa-trash delete" aria-hidden="true"></i> -->
+          <div>
+            <p class="title" id="title5">
+              Everything you should know about ‘module’ & ‘require’ in Node.js
+            </p>
+            <span>
+            </span>
+          </div>
+          <p class="post-content" id="postcontent5">
+            Node.js treats each JavaScript file as a separate module. For
+            instance, if you have a file containing some code and this file is
+            named xyz.js, then this file is treated as a module in Node, and you
+            can say that you’ve created a module named xyz.
+          </p>
+          <span>
+          </span>
+          <div class="button" id="more5"><a href="/html/post.html">...</a></div>
+
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+
+    <!-- The Modal code for Delete Model -->
+    <div id="delete-modal" class="modal">
+
+      <!-- Modal content -->
+      <div class="delete-modal-content">
+        <div class="delete-modal-header">
+          <p class="delete-modal-heading">Are you sure you want to delete this post?</p>
+        </div>
+        <div class="modal-body">
+          <div class="delete-modal-body">
+            <button id="yes-delete">Yes</button>
+            <button id="no-delete">No</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    </div>
+    </div>
+
+    <script src="/Js/header.js"></script>
+    <script src="/Js/bloglist.js"></script>
+
+    <!-- <script src="/Js/index.js"></script> -->
   </body>
 </html>

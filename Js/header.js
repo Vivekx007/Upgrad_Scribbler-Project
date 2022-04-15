@@ -1,3 +1,8 @@
+var modal1 = document.getElementById("myModal1");
+var modal2 = document.getElementById("myModal2");
+var close = document.getElementById("closeId");
+var close2 = document.getElementById("closeId2");
+
 const signUpButton = (id2) => {
   var modal = document.getElementById(id2);
 
@@ -20,3 +25,20 @@ const signUpButton = (id2) => {
     }
   };
 };
+
+// If user is new the user click on sign up that is present in inside sign in
+function signupMember() {
+  modal2.style.display = "block";
+  modal1.style.display = "none";
+
+  close.onclick = () => {
+    console.log(modal2);
+    modal2.style.display = "none";
+  };
+
+  window.onclick = function (event) {
+    if (event.target === modal2) {
+      modal2.style.display = "none";
+    }
+  };
+}

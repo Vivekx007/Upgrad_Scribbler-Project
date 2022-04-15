@@ -1,15 +1,226 @@
-@import url("https://fonts.googleapis.com/css2?family=Marck+Script&display=swap");
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
 
 body {
-  background-color: #ffa500;
+  margin: 0;
+  padding: 0;
+  background: #ffa500;
 }
 
-.title a:link,
-a:visited {
-  text-decoration: none;
-  color: #112fb4;
+.post-container {
+  margin-left: 8%;
+  margin-top: 1%;
+  /* margin-right: 10%; */
 }
-.title a:active,
-a:hover {
-  color: #112fb4;
+
+.post {
+  box-sizing: border-box;
+  width: 40%;
+  height: 180px;
+  display: inline-block;
+  background: #e8e8e8;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  margin-right: 9%;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.post {
+  box-shadow: 1px 1px 1px white;
+}
+
+.post:last-of-type {
+  margin-left: 25%;
+}
+
+.author {
+  display: table-cell;
+  /* background: red; */
+  /* width: fit-content; */
+  height: 12rem;
+  width: 5rem;
+  text-align: center;
+  background: #ffffff;
+  /* padding-right: 3rem; */
+}
+
+.author-name {
+  margin-top: 10px;
+  position: relative;
+  top: 20%;
+  font-weight: bold;
+  /* margin: ; */
+}
+
+.content {
+  display: table-cell;
+  box-sizing: border-box;
+}
+.content i {
+  float: right;
+  font-size: 20px;
+  margin: 15px 10px 0 0;
+}
+
+.title {
+  display: inline;
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+  padding-top: 20px;
+}
+
+.delete {
+  position: static;
+  font-size: 1.3rem;
+  margin-right: 16px;
+  display: flex;
+  flex-direction: row-reverse;
+  left: 70%;
+  cursor: pointer;
+}
+
+.post-content {
+  padding: fit-content;
+  font-size: 18px;
+  height: 80px;
+  width: 91%;
+  padding-top: 0;
+  overflow: hidden;
+  display: block;
+  margin: 8px;
+}
+
+.button {
+  position: static;
+
+  margin-bottom: 10px;
+  margin-right: 16px;
+  font-size: 35px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: -5px;
+}
+
+.title {
+  font-size: 20px;
+  display: block;
+  height: 30px;
+  overflow: hidden;
+  font-family: "Itim", cursive;
+  margin-left: 8px;
+}
+
+#delete-modal {
+  z-index: 1;
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.2s;
+  animation-name: animatetop;
+  animation-duration: 0.2s;
+  display: none;
+  position: fixed;
+  padding-top: 30vh;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.delete-modal-content {
+  background-color: white;
+  margin: auto;
+  padding: 20px 40px;
+  border: 1px solid #888;
+  width: 350px;
+  text-align: center;
+}
+
+#yes-delete,
+#no-delete {
+  position: relative;
+  background-color: red;
+  border: none;
+  outline-style: none;
+  padding: 5% 20%;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#no-delete {
+  background: green;
+  left: 9%;
+}
+
+#yes-delete {
+  left: -9%;
+}
+
+#close-delete {
+  float: right;
+  color: gray;
+  cursor: pointer;
+  display: block;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.delete-modal-heading {
+  /* font-weight:  */
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.button a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.button a:link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.button a:visited {
+  color: inherit;
+}
+
+p#tagline {
+  color: white;
+  font-weight: 600;
+}
+
+.post {
+  box-shadow: 1px 5px 5px rgb(122, 87, 21);
 }
