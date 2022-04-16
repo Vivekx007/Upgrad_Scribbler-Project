@@ -1,0 +1,112 @@
+body {
+  background-color: #fff;
+}
+
+.container {
+  padding: 10px 20px 100px 20px !important;
+}
+
+.post-title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.post-author-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.post-author {
+  font-size: 25px;
+
+  font-family: "Niconne", cursive;
+  /* margin: 0 50% 0 0; */
+  /* padding-left: 20px; */
+}
+
+.post-edit-holder {
+  text-align: right;
+}
+
+.post-edit-btn,
+.post-save-btn,
+.post-like-btn,
+.post-comment-btn {
+  background-color: #da3c57;
+  padding: 6px 15px;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0px;
+  font-size: 14px;
+  box-shadow: 0px 0px 4px gray;
+  cursor: pointer;
+  text-align: center;
+}
+
+.post-edit-btn i,
+.post-save-btn i {
+  margin-left: 5px;
+}
+
+#savePostBtn {
+  display: none;
+}
+
+.post-content {
+  text-align: justify;
+  font-size: 13px;
+  margin: 15px auto;
+  line-height: 20px;
+}
+
+.post-like-btn i {
+  margin-right: 5px;
+}
+
+.post-like-info {
+  font-size: 13px;
+  color: gray;
+  font-family: "Ubuntu Mono", monospace;
+  margin-top: 4px;
+}
+
+.post-comments-holder {
+  margin-top: 15px;
+}
+
+.post-comment {
+  width: 75%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid gray;
+}
+
+.post-comment-btn-holder {
+  margin: 15px 0px;
+}
+
+.comments-heading {
+  font-weight: 600;
+  margin: 20px 0 5px;
+}
+
+.comments-display-div {
+  background-color: #e2e4e6;
+  padding: 12px 5px;
+  display: none;
+}
+
+.user-comment {
+  margin: 10px;
+  background-color: #fff;
+  padding: 10px;
+  font-size: 15px;
+  color: #5b5b5b;
+}

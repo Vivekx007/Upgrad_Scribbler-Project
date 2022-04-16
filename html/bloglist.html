@@ -148,9 +148,10 @@
 
     <!-- post container boxex -->
     <div class="post-container">
-      <div class="post">
+
+      <div class="post" id="post1" data-id="1">
         <div class="author">
-          <p class="author-name"><span id="authorname1"> Srishti Gupta</span></p>
+          <span id="authorname1"><p class="author-name"> Srishti Gupta</p></span>
         </div>
 
         <div class="content">
@@ -166,15 +167,19 @@
             in JavaScript. Though all the three keywords are used for the same
             purpose, they are different.
           </p>
-          <div class="button" id="more1"><a href="/html/post.html">...</a></div>
+          <!-- <span class="col-12 view-post"> <i class="fa fa-ellipsis-h"
+						onclick="viewPostDetails('post1');"></i>
+					</span> -->
+          <div class="button" id="more2" 	onclick="viewPostDetails('post1');">...</div>
+
           <!-- <span>
           </span> -->
         </div>
       </div>
 
-      <div class="post">
+      <div class="post" id="post2">
         <div class="author">
-          <p class="author-name"> <span id="authorname2">Colby Fayock</span> </p>
+          <span id="authorname2"><p class="author-name"> Colby Fayock</p></span>
         </div>
 
         <div class="content">
@@ -190,16 +195,17 @@
             something we can’t easily get more of, but linting can help us make
             the most out of the time we have.
           </p>
-          <span>
-          </span>
-          <div class="button" id="more2"><a href="/html/post.html">...</a></div>
+         
+          <!-- <div class="button" id="more2"><a href="/html/post.html">...</a></div> -->
+          <div class="button" id="more2" 	onclick="viewPostDetails('post2');">...</div>
+
 
         </div>
       </div>
 
-      <div class="post">
+      <div class="post" id="post3">
         <div class="author">
-          <p class="author-name"> <span id="authorname3">Yazeed Bzadough</span></p>
+          <span id="authorname3"><p class="author-name">Yazeed Bzadough</p></span>
         </div>
 
         <div class="content">
@@ -219,14 +225,16 @@
           </p>
           <span>
           </span>
-          <div class="button" id="more3"><a href="/html/post.html">...</a></div>
+          <!-- <div class="button" id="more3"><a href="/html/post.html">...</a></div> -->
+          <div class="button" id="more2" 	onclick="viewPostDetails('post3');">...</div>
+
 
         </div>
       </div>
 
-      <div class="post">
+      <div class="post" id="post4">
         <div class="author">
-          <p class="author-name"> <span id="authorname4">Cedd Burge</span></p>
+          <span id="authorname4"><p class="author-name">Cedd Burge</p></span>
         </div>
 
         <div class="content">
@@ -247,14 +255,16 @@
           </p>
           <span>
           </span>
-          <div class="button" id="more4"><a href="/html/post.html">...</a></div>
+          <!-- <div class="button" id="more4"><a href="/html/post.html">...</a></div> -->
+          <div class="button" id="more2" 	onclick="viewPostDetails('post4');">...</div>
+
 
         </div>
       </div>
 
-      <div class="post">
+      <div class="post" id="post5">
         <div class="author">
-          <p class="author-name"> <span id="authorname5"> Srishti Gupta</span></p>
+          <span id="authorname5"><p class="author-name"> Srishti Gupta</p></span>
         </div>
 
         <div class="content">
@@ -275,7 +285,9 @@
           </p>
           <span>
           </span>
-          <div class="button" id="more5"><a href="/html/post.html">...</a></div>
+          <!-- <div class="button" id="more5"><a href="/html/post.html">...</a></div> -->
+          <div class="button" id="more2" 	onclick="viewPostDetails('post5');">...</div>
+
 
         </div>
       </div>
@@ -308,7 +320,7 @@
     </div>
 
     <script src="/Js/header.js"></script>
-    <script src="/Js/bloglist.js"></script>
+    <script src="../Js/bloglist.js"></script>
 
     <!-- <script src="/Js/index.js"></script> -->
   </body>

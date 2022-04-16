@@ -2,6 +2,8 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/post.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -11,6 +13,12 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Niconne&display=swap"
+      rel="stylesheet"
     />
   </head>
   <body>
@@ -144,73 +152,56 @@
     <p class="title-para" style="color: black">Explore, Imagine, Create</p>
 
     <!-- post container that is editable -->
-    <div class="post container">
-      <div
-        class="heading-content"
-        id="edit-heading"
-        contenteditable="true"
-      ></div>
-      <div class="author">
-        <div class="author-name"></div>
-
-        <!-- Edit button -->
-        <div>
-          <button
-            id="edit-button"
-            type="button"
-            class="btn btn-danger"
-            onclick="EditHandler()"
-          >
-            Edit
-            <i class="fa-solid fa-pen-to-square" style="padding-left: 5px"></i>
-          </button>
+    <div class="container">
+      <div class="post-title col-12" id="postTitle">Post Title</div>
+      <div class="post-author-info col-12">
+        <div class="post-author col-6" id="postAuthor">Post Author</div>
+        <div class="post-edit-holder col-6">
+          <span class="post-edit-btn" id="editPostBtn" onclick="editUserPost();"
+            >Edit<i class="fa fa-edit"></i></span
+          ><span
+            class="post-save-btn"
+            id="savePostBtn"
+            onclick="saveUserPost();"
+            >Save<i class="fa fa-save"></i
+          ></span>
         </div>
       </div>
-
-      <div
-        class="post-content"
-        id="edit-contenttext"
-        contenteditable="true"
-      ></div>
-
-      <!-- like button -->
-      <button
-        id="like-button"
-        type="button"
-        class="btn btn-danger"
-        onclick="countLikesHandler()"
-      >
-        <i class="fa-solid fa-thumbs-up"></i><span id="likeButton">Like</span>
-      </button>
-      <div id="showCount">Be the first one to like this</div>
-
-      <!-- comment Area -->
-      <textarea
-        id="comment"
-        rows="4"
-        cols="135"
-        placeholder="Leave a comment..."
-        name="comment"
-      ></textarea>
-
-      <!-- Comment button -->
-      <div>
-        <button
-          id="comment-button"
-          type="button"
-          class="btn btn-danger"
-          onclick="addCommentHandler(comment)"
+      <div class="col-12 post-content" id="postContent">Post Content</div>
+      <div class="post-like-holder col-12">
+        <span class="post-like-btn" onclick="likePost();"
+          ><i class="fa fa-thumbs-up"></i
+          ><span id="postLikeLabel">Like</span></span
         >
-          Comment
-        </button>
+        <div class="post-like-info">Be the first one to like this!</div>
       </div>
-      <!-- see all comments -->
-      <div id="allCommentsHeading">All Comments</div>
-      <div class="comment-container">
-        <div id="comments"></div>
+      <div class="post-comments-holder col-12">
+        <div class="post-comment-edit col-12">
+          <textarea
+            class="post-comment"
+            placeholder="Leave a comment..."
+            rows="2"
+            id="userComment"
+          ></textarea>
+          <div class="post-comment-btn-holder col-12">
+            <button class="post-comment-btn" onclick="postUserComment();">
+              Comment
+            </button>
+          </div>
+        </div>
+        <div class="col-12 comments-display-holder">
+          <div class="comments-heading col-12">All Comments</div>
+          <div class="col-9 comments-display-div" id="commentsHolder"></div>
+        </div>
       </div>
     </div>
-
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
     <script src="../Js/header.js"></script>
+    <script src="../Js/post.js"></script>
+    <script src="../Js/bloglist.js"></script>
   </body>
 </html>
