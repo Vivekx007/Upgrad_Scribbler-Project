@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- SignIn & SignUp Buttons -->
+    <span id="sign">
+      <button class="top-right" id="myBtn1" onclick="signUpButton('myModal1')">
+        Sign In
+      </button>
+      <button class="top-right" id="myBtn2" onclick="signUpButton('myModal2')">
+        Sign Up
+      </button>
+    </span>
+
+    <!-- SignUp Modal -->
+    <div id="myModal2" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close" id="closeId">&times;</span>
+        <h1 class="signUp-heading">Get Started</h1>
+        <br />
+        <hr />
+        <br />
+
+        <!-- Sign Up form -->
+        <form id="signUp-form">
+          <label for="fname" class="label-content">Full Name</label>
+          <br />
+
+          <input
+            type="text"
+            id="fname"
+            class="textArea-color"
+            name="fname"
+            placeholder="Enter Full Name"
+            required
+          />
+          <br /><br />
+
+          <label for="uname" class="label-content">Username</label>
+          <br />
+          <input
+            type="text"
+            id="uname"
+            class="textArea-color"
+            name="uname"
+            placeholder="Enter Username"
+            required
+          />
+          <br /><br />
+
+          <label for="password" class="label-content">Password</label>
+          <br />
+          <input
+            type="password"
+            id="password"
+            class="textArea-color"
+            name="password"
+            placeholder="Enter Password"
+            required
+          />
+          <br /><br />
+
+          <label for="cpassword" class="label-content">Confirm Password</label>
+          <br />
+          <input
+            type="password"
+            id="cpassword"
+            class="textArea-color"
+            name="cpassword"
+            placeholder="Confirm Password"
+            required
+          />
+          <br /><br />
+          <button class="green-signUp">Sign Up</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Sign In Model -->
+
+    <div id="myModal1" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h1 class="signUp-heading">Welcome Back!</h1>
+        <br />
+        <hr />
+        <br />
+
+        <form id="signIn-form">
+          <label for="uname" class="label-content">Username</label>
+          <br />
+          <input
+            type="text"
+            id="uname"
+            class="textArea-color"
+            name="uname"
+            placeholder="Enter Username"
+            required
+          />
+          <br /><br />
+
+          <label for="password" class="label-content">Password</label>
+          <br />
+          <input
+            type="password"
+            id="password"
+            class="textArea-color"
+            name="password"
+            placeholder="Enter Password"
+            required
+          />
+          <br /><br />
+
+          <button class="green-signUp">Sign In</button>
+        </form>
+        <div id="not-member">
+          <!-- <span -->
+          <p>
+            Not a member?
+            <a href="#" id="not-member" onclick="signupMember();">Sign Up</a>
+          </p>
+
+          <!-- </span> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Project-Title -->
+    <h1 class="project-title">ScriBBler</h1>
+    <p class="title-para" style="color: black">Explore, Imagine, Create</p>
+
+    <!-- post container that is editable -->
+    <div class="post container">
+      <div
+        class="heading-content"
+        id="edit-heading"
+        contenteditable="true"
+      ></div>
+      <div class="author">
+        <div class="author-name"></div>
+
+        <!-- Edit button -->
+        <div>
+          <button
+            id="edit-button"
+            type="button"
+            class="btn btn-danger"
+            onclick="EditHandler()"
+          >
+            Edit
+            <i class="fa-solid fa-pen-to-square" style="padding-left: 5px"></i>
+          </button>
+        </div>
+      </div>
+
+      <div
+        class="post-content"
+        id="edit-contenttext"
+        contenteditable="true"
+      ></div>
+
+      <!-- like button -->
+      <button
+        id="like-button"
+        type="button"
+        class="btn btn-danger"
+        onclick="countLikesHandler()"
+      >
+        <i class="fa-solid fa-thumbs-up"></i><span id="likeButton">Like</span>
+      </button>
+      <div id="showCount">Be the first one to like this</div>
+
+      <!-- comment Area -->
+      <textarea
+        id="comment"
+        rows="4"
+        cols="135"
+        placeholder="Leave a comment..."
+        name="comment"
+      ></textarea>
+
+      <!-- Comment button -->
+      <div>
+        <button
+          id="comment-button"
+          type="button"
+          class="btn btn-danger"
+          onclick="addCommentHandler(comment)"
+        >
+          Comment
+        </button>
+      </div>
+      <!-- see all comments -->
+      <div id="allCommentsHeading">All Comments</div>
+      <div class="comment-container">
+        <div id="comments"></div>
+      </div>
+    </div>
+
+    <script src="../Js/header.js"></script>
+  </body>
+</html>
