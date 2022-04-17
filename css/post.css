@@ -10,7 +10,8 @@ body {
   text-align: center;
   font-weight: 600;
   font-size: 20px;
-  margin-bottom: 15px;
+
+  margin-bottom: 45px;
 }
 
 .post-author-info {
@@ -19,25 +20,36 @@ body {
   justify-content: center;
   align-content: center;
   align-items: center;
+  position: relative;
+  margin-bottom: 45px;
 }
 
 .post-author {
   font-size: 25px;
-
+  position: absolute;
+  right: 91%;
   font-family: "Niconne", cursive;
+  margin: 15px 20px 35px 20px;
+  width: -50px;
+
   /* margin: 0 50% 0 0; */
   /* padding-left: 20px; */
 }
 
 .post-edit-holder {
   text-align: right;
+  padding: 10px 20px 10px 20px;
+  font-size: larger;
+  position: absolute;
+  left: 91%;
+  margin: 15px 20px 35px 20px;
 }
 
 .post-edit-btn,
 .post-save-btn,
 .post-like-btn,
 .post-comment-btn {
-  background-color: #da3c57;
+  background-color: #ef3b65;
   padding: 6px 15px;
   color: #fff;
   display: inline-flex;
@@ -48,6 +60,23 @@ body {
   box-shadow: 0px 0px 4px gray;
   cursor: pointer;
   text-align: center;
+}
+.post-edit-btn:hover,
+.post-save-btn:hover,
+.post-like-btn:hover,
+.post-comment-btn:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.post-like-btn {
+  padding: 10px 30px 10px 30px;
+}
+.post-edit-btn,
+.post-save-btn,
+.post-comment-btn {
+  padding: 10px 20px 10px 20px;
 }
 
 .post-edit-btn i,
@@ -62,39 +91,56 @@ body {
 .post-content {
   text-align: justify;
   font-size: 13px;
-  margin: 15px auto;
+  margin: 15px 20px 35px 20px;
+  /* margin-bottom: 35px; */
+
   line-height: 20px;
+
+  padding-top: 20px;
+  font-size: large;
 }
 
+.post-like-btn {
+  margin: 0 20px 0 20px;
+}
 .post-like-btn i {
   margin-right: 5px;
 }
 
 .post-like-info {
   font-size: 13px;
-  color: gray;
+  /* color: gray; */
   font-family: "Ubuntu Mono", monospace;
   margin-top: 4px;
+  margin: 15px 20px 35px 20px;
 }
 
 .post-comments-holder {
   margin-top: 15px;
 }
+/* .postLikeLabel {
+  margin: 15px 20px 35px 20px;
+} */
 
 .post-comment {
   width: 75%;
   padding: 8px;
   font-size: 14px;
   border: 1px solid gray;
+  margin: 15px 20px 0 20px;
 }
 
 .post-comment-btn-holder {
   margin: 15px 0px;
+  margin: 15px 20px 35px 20px;
 }
 
 .comments-heading {
   font-weight: 600;
   margin: 20px 0 5px;
+  margin: 5px 20px 35px 20px;
+}
+.post-comment-edit {
 }
 
 .comments-display-div {
