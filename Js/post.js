@@ -18,6 +18,7 @@ window.onload = function () {
     document.getElementById("postContent").innerHTML = decodeURI(data.content);
   }
 };
+
 var likeCount = 0;
 
 // Like Post Function

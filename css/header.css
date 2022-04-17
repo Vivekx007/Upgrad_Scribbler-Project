@@ -37,6 +37,9 @@
   font-size: 50px;
   font-weight: normal;
 }
+.home:hover {
+  cursor: pointer;
+}
 
 /* Page-Title para */
 .title-para {

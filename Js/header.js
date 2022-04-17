@@ -3,6 +3,10 @@ var modal2 = document.getElementById("myModal2");
 var close = document.getElementById("closeId");
 var close2 = document.getElementById("closeId2");
 
+const homePage = () => {
+  location.href = "/index.html";
+};
+
 const signUpButton = (id2) => {
   var modal = document.getElementById(id2);
 
